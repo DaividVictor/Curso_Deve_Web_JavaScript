@@ -1,27 +1,61 @@
-<table border="1"> <!-- tag do HTML <table> cria uma tabela -->
+<table> <!-- tag do HTML <table> cria uma tabela -->
   <caption>Produtos</caption>
   <thead> <!-- Define uma área de cabeçário da tabela -->
-    <tr> <!-- tag p/ criar a linha da tabela -->
-      <th>Produto</th> <!-- tag p/ criar a coluna da tabela -->
+    <tr> <!-- table row (tr) é tag p/ criar a linha da tabela -->
+      <th>Produto</th> <!-- table head (th) é uma tag p/ criar a coluna da tabela -->
       <th>Preço</th>
       <th>Quantidade</th>
       <th>Total</th>
     </tr>
   </thead>
   <tbody> <!-- É o corpo da tabela onde de fato ficarão os dados -->
-    <tr> <!-- tag p/ criar a linha da tabela -->
-      <td>iPad</td> <!-- Cria a célula de dados da tabela -->
-      <td>3289,00</td>
+    <tr> <!-- table row (tr) é tag p/ criar a linha da tabela -->
+      <td>iPad</td> <!-- table data (td) Cria a célula de dados da tabela -->
+      <td>3.289,00</td>
       <td>5</td>
-      <td>16445,00</td>
+      <td>16.445,00</td>
     </tr>
     <tr>
       <td>Samsung S9</td>
-      <td>2649,00</td>
+      <td>2.649,00</td>
       <td>8</td>
-      <td>21192,00</td>
+      <td>21.192,00</td>
     </tr>
   </tbody>
+  <tfoot> <!-- Representa o resumo das colunas (rodapé), numa tabela  -->
+    <tr>
+      <td colspan="3">Total</td>
+      <td>37.637,00</td>
+    </tr>
+  </tfoot>
 </table>
 
-<!-- PAREI NO INSTANTE 06:13 -->
+<style>
+  table {
+    border-collapse: collapse; 
+  } <!-- Deixa a tabela sem bordas -->
+  
+  th, td {
+    padding: 10px;
+  }
+
+  thead tr {
+    border-bottom: solid 3px #444;
+  }
+
+  tbody tr:hover {
+    background-color: #dedede;
+  } /* Com essa propriedade, ao passar o mouse as linhas do "tbody" serão destacadas */
+
+  tfoot {
+    background-color: #444;
+    color: #fff;
+    font-weight: bold;
+  }
+</style>
+
+<!-- OBSERVAÇÃO SOBRE ALGUMAS PROPRIEDADES:
+  [colspan="3"] deixa a linha "Total" ocupando três colunas, a saber: Produto, Preço e Quantidade;
+  [rowspan="2"] deixa a linha "Total" ocupando duas linhas, a saber: o valor total "37.637,00" e "Teste";
+-->
+<!--  -->
